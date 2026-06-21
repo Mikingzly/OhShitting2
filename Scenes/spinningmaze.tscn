@@ -21,4 +21,4 @@ mesh = SubResource("BoxMesh_68d62")
 shape = SubResource("BoxShape3D_xqlme")
 
 [node name="Player" parent="." unique_id=914407101 instance=ExtResource("1_c3gad")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5374427, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.978643, 0)
