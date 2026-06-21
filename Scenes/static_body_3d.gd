@@ -9,4 +9,4 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	rotate_y(speed * delta)
-@export var speed:float = 0.5
+@export var speed:float = 5 

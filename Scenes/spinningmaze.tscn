@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://ddvqxg8fq67y3" path="res://Scenes/static_body_3d.gd" id="1_68d62"]
 [ext_resource type="PackedScene" uid="uid://dbfi57rpobsxo" path="res://Scenes/Player.tscn" id="1_c3gad"]
-[ext_resource type="PackedScene" uid="uid://cqpeuuw7oucj8" path="res://maze.tscn" id="2_xqlme"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_68d62"]
 size = Vector3(20, 1, 20)
@@ -16,15 +15,10 @@ size = Vector3(20.2, 1.2, 20.2)
 script = ExtResource("1_68d62")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=78684028]
-visible = false
 mesh = SubResource("BoxMesh_68d62")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1824110214]
 shape = SubResource("BoxShape3D_xqlme")
 
-[node name="Maze" parent="StaticBody3D" unique_id=1029730341 instance=ExtResource("2_xqlme")]
-
 [node name="Player" parent="." unique_id=914407101 instance=ExtResource("1_c3gad")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.978643, 0)
-
-[node name="MazeModel" type="Node3D" parent="." unique_id=1134634946]
