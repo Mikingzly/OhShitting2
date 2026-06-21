@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cl2oc108gakh3"]
+
+[ext_resource type="PackedScene" uid="uid://dog7dp81oqrmu" path="res://Scenes/pause_menu.tscn" id="1_qpjln"]
+
+[node name="InitialRoom" type="Node2D" unique_id=635571918]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1673173256]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=2128135254 instance=ExtResource("1_qpjln")]
