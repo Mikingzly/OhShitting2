@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://cqpeuuw7oucj8"]
+
+[ext_resource type="PackedScene" uid="uid://bmvqxv2yjespf" path="res://Maze.glb" id="1_dj01w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_31kh1"]
+cull_mode = 2
+albedo_color = Color(0.43529412, 1, 0.39607844, 1)
+
+[node name="Maze" unique_id=1439159909 instance=ExtResource("1_dj01w")]
+
+[node name="Cube" parent="." index="1" unique_id=1705379996]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_001" parent="." index="2" unique_id=496847582]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_002" parent="." index="3" unique_id=1934495101]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_003" parent="." index="4" unique_id=496219381]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_004" parent="." index="5" unique_id=1487231169]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_005" parent="." index="6" unique_id=657910029]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_006" parent="." index="7" unique_id=62410005]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_008" parent="." index="8" unique_id=769810042]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_009" parent="." index="9" unique_id=1778262740]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_010" parent="." index="10" unique_id=1318365991]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_011" parent="." index="11" unique_id=1488435171]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_007" parent="." index="12" unique_id=910185738]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_012" parent="." index="13" unique_id=710946885]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_013" parent="." index="14" unique_id=432732009]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_014" parent="." index="15" unique_id=387965888]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_015" parent="." index="16" unique_id=2116052152]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_016" parent="." index="17" unique_id=619229009]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_017" parent="." index="18" unique_id=716509069]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_018" parent="." index="19" unique_id=1840518272]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_019" parent="." index="20" unique_id=416854055]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_020" parent="." index="21" unique_id=182687502]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_021" parent="." index="22" unique_id=1834409507]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_022" parent="." index="23" unique_id=656946694]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
+
+[node name="Cube_023" parent="." index="24" unique_id=854284073]
+surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
