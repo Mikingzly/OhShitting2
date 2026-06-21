@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ddvqxg8fq67y3" path="res://Scenes/static_body_3d.gd" id="1_68d62"]
 [ext_resource type="PackedScene" uid="uid://dbfi57rpobsxo" path="res://Scenes/Player.tscn" id="1_c3gad"]
+[ext_resource type="PackedScene" uid="uid://dog7dp81oqrmu" path="res://Scenes/pause_menu.tscn" id="3_xqlme"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_68d62"]
 size = Vector3(20, 1, 20)
@@ -22,3 +23,5 @@ shape = SubResource("BoxShape3D_xqlme")
 
 [node name="Player" parent="." unique_id=914407101 instance=ExtResource("1_c3gad")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.978643, 0)
+
+[node name="PauseMenu" parent="." unique_id=2128135254 instance=ExtResource("3_xqlme")]
