@@ -16,17 +16,19 @@ size = Vector3(20.2, 1.2, 20.2)
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2087929473]
 script = ExtResource("1_68d62")
 
+[node name="Maze" parent="StaticBody3D" unique_id=1439159909 instance=ExtResource("2_t31gh")]
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=78684028]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.029119492, 14.354326, -0.015907288)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91.16703, 14.354326, -0.015907288)
 mesh = SubResource("BoxMesh_68d62")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1824110214]
 shape = SubResource("BoxShape3D_xqlme")
 
-[node name="Maze" parent="StaticBody3D" unique_id=1439159909 instance=ExtResource("2_t31gh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08355284, 0)
-
 [node name="Player" parent="." unique_id=914407101 instance=ExtResource("1_c3gad")]
-transform = Transform3D(0.9992515, 0.038684294, 0, -0.038684294, 0.9992515, 0, 0, 0, 1, -1.0858072, 0.8446841, 0)
+transform = Transform3D(0.9992515, 0.038684294, 0, -0.038684294, 0.9992515, 0, 0, 0, 1, -1.0858072, 1.0759916, 0)
 
 [node name="PauseMenu" parent="." unique_id=2128135254 instance=ExtResource("3_xqlme")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=52884119]
+transform = Transform3D(0.9992515, 0.0386843, -8.2315195e-09, 0.0018728676, -0.048377704, 0.9988274, 0.038638934, -0.9980797, -0.048413943, -1.0858072, 6.7284174, 0)
