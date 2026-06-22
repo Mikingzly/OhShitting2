@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bnhmdt4xdspc"
-path="res://.godot/imported/Maze.glb-5987be8add2a2feb3756ec1574d292a3.scn"
+path="res://.godot/imported/Maze.glb-5673341210aa2d8909caae3a5be0f7ed.scn"
 
 [deps]
 
-source_file="res://Scenes/Maze.glb"
-dest_files=["res://.godot/imported/Maze.glb-5987be8add2a2feb3756ec1574d292a3.scn"]
+source_file="res://Assets/Maze.glb"
+dest_files=["res://.godot/imported/Maze.glb-5673341210aa2d8909caae3a5be0f7ed.scn"]
 
 [params]
 

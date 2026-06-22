@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cl2oc108gakh3"]
 
-[ext_resource type="PackedScene" uid="uid://dog7dp81oqrmu" path="res://Scenes/pause_menu.tscn" id="1_qpjln"]
+[ext_resource type="PackedScene" uid="uid://dog7dp81oqrmu" path="res://Scenes/UI/pause_menu.tscn" id="1_qpjln"]
 [ext_resource type="Texture2D" uid="uid://c51gl6iabgqwu" path="res://Screenshot 2026-06-08 150939.png" id="2_2fjlk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2fjlk"]
