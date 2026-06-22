@@ -133,6 +133,7 @@ grow_vertical = 2
 script = ExtResource("1_k0w1u")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2011492826]
+visible = false
 material = SubResource("ShaderMaterial_bpi0q")
 layout_mode = 1
 anchors_preset = 15
