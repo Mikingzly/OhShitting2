@@ -1,12 +1,17 @@
 extends Control
 
+func _ready() -> void:
+	hide()
+
 func resume():
 	get_tree().paused = false
-	$AnimationPlayer.play_backwards("blur")
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	hide()
+
 
 func pause():
 	get_tree().paused = true
-	$AnimationPlayer.play("blur")
+
 
 func testEsc():
 	if Input.is_action_just_pressed("esc") and get_tree().paused == false:

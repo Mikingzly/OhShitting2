@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://ddvqxg8fq67y3" path="res://Scripts/static_body_3d.gd" id="1_68d62"]
 [ext_resource type="PackedScene" uid="uid://dbfi57rpobsxo" path="res://Scenes/Characters/Player.tscn" id="1_c3gad"]
 [ext_resource type="PackedScene" uid="uid://cqpeuuw7oucj8" path="res://Scenes/Maps/maze.tscn" id="2_t31gh"]
-[ext_resource type="PackedScene" uid="uid://dog7dp81oqrmu" path="res://Scenes/UI/pause_menu.tscn" id="3_xqlme"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_68d62"]
 size = Vector3(20, 1, 20)
@@ -27,8 +26,6 @@ shape = SubResource("BoxShape3D_xqlme")
 
 [node name="Player" parent="." unique_id=914407101 instance=ExtResource("1_c3gad")]
 transform = Transform3D(0.9992515, 0.038684294, 0, -0.038684294, 0.9992515, 0, 0, 0, 1, -1.0858072, 1.0759916, 0)
-
-[node name="PauseMenu" parent="." unique_id=2128135254 instance=ExtResource("3_xqlme")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=52884119]
 transform = Transform3D(0.9992515, 0.0386843, -8.2315195e-09, 0.0018728676, -0.048377704, 0.9988274, 0.038638934, -0.9980797, -0.048413943, -1.0858072, 6.7284174, 0)
