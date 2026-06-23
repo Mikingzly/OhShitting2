@@ -16,6 +16,7 @@ size = Vector3(20.2, 1.2, 20.2)
 script = ExtResource("1_68d62")
 
 [node name="Maze" parent="StaticBody3D" unique_id=1439159909 instance=ExtResource("2_t31gh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2487421, 0.08797836, -0.07876015)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=78684028]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91.16703, 14.354326, -0.015907288)
@@ -25,7 +26,7 @@ mesh = SubResource("BoxMesh_68d62")
 shape = SubResource("BoxShape3D_xqlme")
 
 [node name="Player" parent="." unique_id=914407101 instance=ExtResource("1_c3gad")]
-transform = Transform3D(0.9992515, 0.038684294, 0, -0.038684294, 0.9992515, 0, 0, 0, 1, -1.0858072, 1.0759916, 0)
+transform = Transform3D(0.9992515, 0.038684294, 0, -0.038684294, 0.9992515, 0, 0, 0, 1, -1.5888786, 3.236145, 0.38335037)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=52884119]
 transform = Transform3D(0.9992515, 0.0386843, -8.2315195e-09, 0.0018728676, -0.048377704, 0.9988274, 0.038638934, -0.9980797, -0.048413943, -1.0858072, 6.7284174, 0)

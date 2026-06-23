@@ -6,6 +6,8 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_kyqiw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gntrk"]
+margin = 0.0
+height = 2.5
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gjot8"]
 
