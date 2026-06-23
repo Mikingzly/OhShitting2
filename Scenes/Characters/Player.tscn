@@ -11,26 +11,26 @@ height = 2.5
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gjot8"]
 
-[node name="Player" type="Node3D" unique_id=914407101]
-
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=2112436442]
+[node name="Player" type="CharacterBody3D" unique_id=2112436442]
 script = ExtResource("1_rpqav")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1812238169]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1812238169]
 mesh = SubResource("CapsuleMesh_kyqiw")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1133677043]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1133677043]
 shape = SubResource("CapsuleShape3D_gntrk")
 
-[node name="Head" type="Node3D" parent="CharacterBody3D" unique_id=771485798]
+[node name="Head" type="Node3D" parent="." unique_id=771485798]
 unique_name_in_owner = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/Head" unique_id=674036568]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Head" unique_id=674036568]
 transform = Transform3D(0.39777905, 0, 0, 0, 0.018961318, 0.3542539, 0, -0.33724678, 0.019917525, 0, 0.55152315, -0.23511773)
 mesh = SubResource("CapsuleMesh_gjot8")
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head" unique_id=528004526]
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=528004526]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55996215, 0)
 
-[node name="PauseMenu" parent="." unique_id=2128135254 instance=ExtResource("2_0el0d")]
+[node name="Player" type="Node3D" parent="." unique_id=914407101]
+
+[node name="PauseMenu" parent="Player" unique_id=2128135254 instance=ExtResource("2_0el0d")]
 unique_name_in_owner = true

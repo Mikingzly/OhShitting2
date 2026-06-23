@@ -49,3 +49,4 @@ func _process(delta: float) -> void:
 	elif Input.is_action_just_pressed('esc') and pause_menu.visible == true:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		pause_menu.hide()
+	print(position)

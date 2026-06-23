@@ -12,7 +12,9 @@ size = Vector3(20.2, 1.2, 20.2)
 
 [node name="Spinningmaze" type="Node3D" unique_id=523745062]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2087929473]
+[node name="StaticBody3D" type="RigidBody3D" parent="." unique_id=1712485393]
+freeze = true
+freeze_mode = 1
 script = ExtResource("1_68d62")
 
 [node name="Maze" parent="StaticBody3D" unique_id=1439159909 instance=ExtResource("2_t31gh")]

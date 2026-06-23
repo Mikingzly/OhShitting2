@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cd0rlfoaovmla"]
+
+[ext_resource type="PackedScene" uid="uid://bnhmdt4xdspc" path="res://Assets/Maze.glb" id="1_lc1oi"]
+
+[node name="Test" type="Node3D" unique_id=1906566106]
+
+[node name="Maze" parent="." unique_id=736209257 instance=ExtResource("1_lc1oi")]
