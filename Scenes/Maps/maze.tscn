@@ -87,7 +87,8 @@ size = Vector3(2.446289, 2.055664, 4.5319824)
 [sub_resource type="BoxShape3D" id="BoxShape3D_bq4gt"]
 size = Vector3(4.428589, 2.1384888, 3.5963135)
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_2auom"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_yjqji"]
+size = Vector3(34.62616, 1, 33.818604)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dqxyt"]
 size = Vector3(1.1625366, 2.0975952, 3.774292)
@@ -353,8 +354,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube_020" index="0" unique_id=1304680650]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_020/StaticBody3D" index="0" unique_id=1302144394]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09777832, 0.6404236, -0.54550177)
-shape = SubResource("WorldBoundaryShape3D_2auom")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13967896, 0.6404236, 0.06716961)
+shape = SubResource("BoxShape3D_yjqji")
 
 [node name="Cube_021" parent="." index="22" unique_id=1004801997]
 surface_material_override/0 = SubResource("StandardMaterial3D_31kh1")
