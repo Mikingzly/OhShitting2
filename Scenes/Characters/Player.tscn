@@ -4,12 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://dog7dp81oqrmu" path="res://Scenes/UI/pause_menu.tscn" id="2_0el0d"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_kyqiw"]
+radius = 0.25
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gntrk"]
 margin = 0.0
-height = 2.5
+radius = 0.3
+height = 2.1
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gjot8"]
+radius = 0.2
 
 [node name="Player" type="CharacterBody3D" unique_id=2112436442]
 script = ExtResource("1_rpqav")
