@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://oky3kunpy3ku"]
+
+[ext_resource type="Script" uid="uid://cxcfdrd208nal" path="res://Scripts/Collectible.gd" id="1_4xoli"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wqeun"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xoli"]
+albedo_color = Color(0, 1, 1, 1)
+emission_enabled = true
+emission = Color(0.5921569, 0.627451, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_7nkl6"]
+
+[node name="Collectible" type="Node3D" unique_id=1886434197]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=644730263 groups=["Player"]]
+script = ExtResource("1_4xoli")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1206513373]
+shape = SubResource("SphereShape3D_wqeun")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D" unique_id=161036221]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_4xoli")
+mesh = SubResource("SphereMesh_7nkl6")

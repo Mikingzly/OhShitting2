@@ -8,6 +8,8 @@ const JUMP_VELOCITY = 4.5
 @onready var camera_3d: Camera3D = $Head/Camera3D
 @export var sensitivity: float = 0.002
 @onready var pause_menu: Control = %PauseMenu
+@onready var Flashlight = $Head/Camera3D/Flashlight
+
 
 func _ready() -> void:
 	camera_3d.current = true
@@ -50,3 +52,5 @@ func _process(delta: float) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		pause_menu.hide()
 	
+	if Flashlight.visible:
+		Flashlight.light_energy = randf_range(2.8, 3.2)
