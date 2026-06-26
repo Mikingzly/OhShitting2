@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dcaquwvjuwksi"]
 
+[ext_resource type="FontFile" uid="uid://caxtk78mytsox" path="res://exclusion.ttf" id="1_mtq4d"]
 [ext_resource type="Script" uid="uid://d1bcymoac2em8" path="res://Scripts/Score.gd" id="1_yub21"]
 
 [node name="Score" type="Control" unique_id=1852801071]
@@ -13,6 +14,8 @@ grow_vertical = 2
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=183316117]
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=29398864]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 220.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource("1_mtq4d")
+theme_override_font_sizes/font_size = 32
 script = ExtResource("1_yub21")

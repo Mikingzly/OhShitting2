@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dbfi57rpobsxo" path="res://Scenes/Characters/Player.tscn" id="2_qy0v7"]
 [ext_resource type="Shader" uid="uid://biei0uor8errm" path="res://Scripts/RetroMaze.gdshader" id="3_qy0v7"]
 [ext_resource type="PackedScene" uid="uid://oky3kunpy3ku" path="res://Scenes/Collectible.tscn" id="5_3s7pt"]
-[ext_resource type="PackedScene" uid="uid://dcaquwvjuwksi" path="res://Scenes/UI/Score.tscn" id="7_18eer"]
+[ext_resource type="Script" uid="uid://bitclhqabjgom" path="res://Scenes/Maps/ui.gd" id="7_5usfb"]
+[ext_resource type="FontFile" uid="uid://caxtk78mytsox" path="res://exclusion.ttf" id="7_1331x"]
 [ext_resource type="AudioStream" uid="uid://s0avgvlqlr01" path="res://Sounds/Collect_3.wav" id="7_f4amj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ou653"]
@@ -107,6 +108,36 @@ func _process(delta: float) -> void:
 	pass
 "
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5usfb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3362g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ia54j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3b286"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8hw6n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sqc6m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lq2ne"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qa7se"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gq8xe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lvs8h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x4tag"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vfhvb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_awmxm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ovg3l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wf3u0"]
+
 [node name="NewMazeTest" type="Node3D" unique_id=1493926343]
 script = ExtResource("1_h7weh")
 
@@ -133,7 +164,7 @@ transform = Transform3D(1, 0, 0, 0, 1.3375051, 0, 0, 0, 1.0536754, 3.3708124, 1.
 shape = SubResource("BoxShape3D_8d3l1")
 
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" unique_id=418066329]
-transform = Transform3D(1, 0, 0, 0, 1.3375051, 0, 0, 0, 1, 10.8138275, 1.2777171, -0.85252845)
+transform = Transform3D(1, 0, 0, 0, 1.3375051, 0, 0, 0, 1, 10.73116, 1.3129961, -0.85252845)
 shape = SubResource("BoxShape3D_3s7pt")
 
 [node name="CollisionShape3D7" type="CollisionShape3D" parent="StaticBody3D" unique_id=74601222]
@@ -177,15 +208,15 @@ transform = Transform3D(1, 0, 0, 0, 1.7404603, 0, 0, 0, 0.86113447, -8.288748, 1
 shape = SubResource("BoxShape3D_f4amj")
 
 [node name="CollisionShape3D17" type="CollisionShape3D" parent="StaticBody3D" unique_id=1553553068]
-transform = Transform3D(0.8731999, 0, 0, 0, 1.9113525, 0, 0, 0, 1, -6.353254, 1.7185994, 6.7212253)
+transform = Transform3D(0.95531064, 0, 0, 0, 1.9113525, 0, 0, 0, 1, -6.3487167, 1.7185994, 6.7212253)
 shape = SubResource("BoxShape3D_1331x")
 
 [node name="CollisionShape3D18" type="CollisionShape3D" parent="StaticBody3D" unique_id=127268918]
-transform = Transform3D(0.93124264, 0, 0, 0, 1.5586952, 0, 0, 0, 1, -3.3892817, 1.5721942, -7.9317427)
+transform = Transform3D(0.93124264, 0, 0, 0, 1.5586952, 0, 0, 0, 1.2894135, -3.3892817, 1.5721942, -8.490167)
 shape = SubResource("BoxShape3D_1331x")
 
 [node name="CollisionShape3D19" type="CollisionShape3D" parent="StaticBody3D" unique_id=1891006614]
-transform = Transform3D(0.9378007, 0, 0, 0, 1.9339248, 0, 0, 0, 1, -1.3933667, 1.3074045, -10.19768)
+transform = Transform3D(0.9378007, 0, 0, 0, 1.9339248, 0, 0, 0, 1, -1.3933667, 1.3074045, -10.265165)
 shape = SubResource("BoxShape3D_f4amj")
 
 [node name="CollisionShape3D20" type="CollisionShape3D" parent="StaticBody3D" unique_id=1643374197]
@@ -229,11 +260,11 @@ transform = Transform3D(0.9293695, 0, 0, 0, 1.6315274, 0, 0, 0, 1, -13.468746, 1
 shape = SubResource("BoxShape3D_8hw6n")
 
 [node name="CollisionShape3D30" type="CollisionShape3D" parent="StaticBody3D" unique_id=1758160411]
-transform = Transform3D(1, 0, 0, 0, 1.916916, 0, 0, 0, 1, 11.220193, 1.4962431, 10.020975)
+transform = Transform3D(1, 0, 0, 0, 1.916916, 0, 0, 0, 1.7204027, 11.220193, 1.4962431, 9.947543)
 shape = SubResource("BoxShape3D_sqc6m")
 
 [node name="CollisionShape3D31" type="CollisionShape3D" parent="StaticBody3D" unique_id=848762519]
-transform = Transform3D(1, 0, 0, 0, 1.9871591, 0, 0, 0, 1, 11.193817, 1.4962431, -11.192752)
+transform = Transform3D(1, 0, 0, 0, 1.9871591, 0, 0, 0, 1.7720524, 11.194172, 1.4962431, -11.192752)
 shape = SubResource("BoxShape3D_sqc6m")
 
 [node name="CollisionShape3D32" type="CollisionShape3D" parent="StaticBody3D" unique_id=1316170870]
@@ -281,18 +312,19 @@ transform = Transform3D(1.2200023, 0, 0, 0, 3.739553, 0, 0, 0, 4.959301, 6.47345
 shape = SubResource("BoxShape3D_x4tag")
 
 [node name="MazeModel" type="MeshInstance3D" parent="." unique_id=907004014]
-transform = Transform3D(1, 0, 0, 0, 1.3375051, 0, 0, 0, 1, 0.49200857, 0.014309168, -0.87718403)
+transform = Transform3D(1, 0, 0, 0, 1.3375051, 0, 0, 0, 1, 0.4664892, 0.04894662, -0.86444676)
 material_override = SubResource("StandardMaterial3D_8d3l1")
 material_overlay = SubResource("ShaderMaterial_3s7pt")
 mesh = ExtResource("1_ou653")
 
 [node name="Player" parent="." unique_id=2112436442 instance=ExtResource("2_qy0v7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91988176, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4057255, 0.91988176, -0.24435192)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=706752454]
 environment = SubResource("Environment_x4tag")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1843788282]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=943745066]
 material = SubResource("ShaderMaterial_8d3l1")
@@ -327,10 +359,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6692686, 0.7, 2.0703733)
 script = SubResource("GDScript_18eer")
 
 [node name="Collectible4" parent="Points" unique_id=1324376198 instance=ExtResource("5_3s7pt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.635314, 0.7, 3.860884)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.78869, 0.7, 3.948962)
 
 [node name="Collectible5" parent="Points" unique_id=583221265 instance=ExtResource("5_3s7pt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9496129, 0.7, 3.8885396)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.054862, 0.7, 3.8885396)
 
 [node name="Collectible6" parent="Points" unique_id=1850844134 instance=ExtResource("5_3s7pt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8654613, 0.6999995, 5.7711062)
@@ -350,9 +382,622 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.67237544, 0.7, -5.067993)
 [node name="Collectible11" parent="Points" unique_id=1232576272 instance=ExtResource("5_3s7pt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5429647, 0.6999995, -5.067993)
 
-[node name="Score" parent="." unique_id=1852801071 instance=ExtResource("7_18eer")]
-mouse_filter = 2
+[node name="Collectible12" parent="Points" unique_id=734887653 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7766058, 0.69999975, -2.0808275)
+
+[node name="Collectible13" parent="Points" unique_id=1831293290 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.833521, 0.7, -2.0283625)
+
+[node name="Collectible14" parent="Points" unique_id=1095538118 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9160185, 0.7, -3.7806394)
+
+[node name="Collectible15" parent="Points" unique_id=1832317867 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.918927, 0.7, -5.228073)
+
+[node name="Collectible16" parent="Points" unique_id=240189086 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5400085, 0.7, -5.2395926)
+
+[node name="Collectible17" parent="Points" unique_id=1083317706 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8108315, 0.7, -6.9976745)
+
+[node name="Collectible18" parent="Points" unique_id=2048469449 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.031654, 0.7, -5.2208743)
+
+[node name="Collectible19" parent="Points" unique_id=1221246211 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.035835, 0.7, -3.6281376)
+
+[node name="Collectible20" parent="Points" unique_id=1802060755 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.038767, 0.7, -7.039774)
+
+[node name="Collectible21" parent="Points" unique_id=1697387309 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.036636, 0.7, -8.786852)
+
+[node name="Collectible22" parent="Points" unique_id=1649867893 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.019742, 0.7, -8.792017)
+
+[node name="Collectible23" parent="Points" unique_id=859498973 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.114079, 0.7, -8.785669)
+
+[node name="Collectible24" parent="Points" unique_id=1563935808 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.144338, 0.7, -9.980696)
+
+[node name="Collectible25" parent="Points" unique_id=1528386556 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.148046, 0.7, -11.916004)
+
+[node name="Collectible26" parent="Points" unique_id=1879769400 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1656685, 0.69999427, -13.936743)
+
+[node name="Collectible27" parent="Points" unique_id=471493433 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.110834, 0.7, -13.975609)
+
+[node name="Collectible28" parent="Points" unique_id=1100840443 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.947322, 0.7, -10.57755)
+
+[node name="Collectible29" parent="Points" unique_id=26913334 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.970723, 0.7, -12.035188)
+
+[node name="Collectible30" parent="Points" unique_id=701848268 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.067629, 0.69999903, -13.885424)
+
+[node name="Collectible31" parent="Points" unique_id=1624738535 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.956722, 0.7, -13.975152)
+
+[node name="Collectible32" parent="Points" unique_id=596233549 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.01984, 0.7, -2.1301384)
+
+[node name="Collectible33" parent="Points" unique_id=967673362 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.626357, 0.7, -2.1616948)
+
+[node name="Collectible34" parent="Points" unique_id=1748073975 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.106631, 0.7, -2.1875505)
+
+[node name="Collectible35" parent="Points" unique_id=970845635 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.086661, 0.7, -3.8911166)
+
+[node name="Collectible36" parent="Points" unique_id=1275979663 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.078568, 0.7, -5.579809)
+
+[node name="Collectible37" parent="Points" unique_id=301529914 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.730097, 0.7, -5.6432)
+
+[node name="Collectible38" parent="Points" unique_id=2003601129 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1645565, 0.7, -7.9715967)
+
+[node name="Collectible39" parent="Points" unique_id=971714087 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.162839, 0.7, -5.6875687)
+
+[node name="Collectible40" parent="Points" unique_id=2083300054 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.156639, 0.7, -3.7023838)
+
+[node name="Collectible41" parent="Points" unique_id=1676951093 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.147636, 0.7, -1.6539555)
+
+[node name="Collectible42" parent="Points" unique_id=1509266852 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.181509, 0.7, 0.40254164)
+
+[node name="Collectible43" parent="Points" unique_id=1581737710 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7316878, 0.7, 1.1148355)
+
+[node name="Collectible44" parent="Points" unique_id=1450529042 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7140787, 0.7, 2.672462)
+
+[node name="Collectible45" parent="Points" unique_id=827198243 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.873214, 0.7, 1.1139996)
+
+[node name="Collectible46" parent="Points" unique_id=839900655 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2981815, 0.7, 1.0296801)
+
+[node name="Collectible47" parent="Points" unique_id=2114842875 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8942037, 0.7, 2.7282698)
+
+[node name="Collectible48" parent="Points" unique_id=278334958 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9182835, 0.7, 4.15813)
+
+[node name="Collectible49" parent="Points" unique_id=747532345 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.582514, 0.7, 4.1896267)
+
+[node name="Collectible50" parent="Points" unique_id=708946621 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.650112, 0.7, 4.0010266)
+
+[node name="Collectible51" parent="Points" unique_id=355316930 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17595002, 0.7, 3.9906087)
+
+[node name="Collectible52" parent="Points" unique_id=448868945 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9922953, 0.7, 4.1924458)
+
+[node name="Collectible53" parent="Points" unique_id=539744132 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9694004, 0.7, 2.555823)
+
+[node name="Collectible54" parent="Points" unique_id=489059330 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.994856, 0.7, 0.9309628)
+
+[node name="Collectible55" parent="Points" unique_id=482181335 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.993232, 0.7, -0.5680195)
+
+[node name="Collectible56" parent="Points" unique_id=663807985 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.795195, 0.7, 0.54283655)
+
+[node name="Collectible57" parent="Points" unique_id=1012551883 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.217104, 0.7, 0.5856335)
+
+[node name="Collectible58" parent="Points" unique_id=1776138004 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.219232, 0.7, 2.3665602)
+
+[node name="Collectible59" parent="Points" unique_id=1668939592 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.21385, 0.7, 3.8984346)
+
+[node name="Collectible60" parent="Points" unique_id=231793755 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.903879, 0.7, 3.914045)
+
+[node name="Collectible61" parent="Points" unique_id=2105013753 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.244058, 0.7, 3.8740668)
+
+[node name="Collectible62" parent="Points" unique_id=1385115739 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.231755, 0.70000046, 2.24089)
+
+[node name="Collectible63" parent="Points" unique_id=1204907193 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.217259, 0.7, 5.522865)
+
+[node name="Collectible64" parent="Points" unique_id=1098123661 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.116978, 0.7, 7.079017)
+
+[node name="Collectible65" parent="Points" unique_id=1677148668 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.112033, 0.7, 8.750689)
+
+[node name="Collectible66" parent="Points" unique_id=1341254346 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.530577, 0.7, 7.0447164)
+
+[node name="Collectible67" parent="Points" unique_id=1305669406 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.970199, 0.7, 7.08976)
+
+[node name="Collectible68" parent="Points" unique_id=1994766197 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1138525, 0.7, 10.675296)
+
+[node name="Collectible69" parent="Points" unique_id=641365029 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.280572, 0.7, 7.150636)
+
+[node name="Collectible70" parent="Points" unique_id=1999337101 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9888973, 0.7, 5.983346)
+
+[node name="Collectible71" parent="Points" unique_id=1440196278 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.963847, 0.7, 7.920553)
+
+[node name="Collectible72" parent="Points" unique_id=445487566 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.143575, 0.7, 12.628256)
+
+[node name="Collectible73" parent="Points" unique_id=872002384 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.252535, 0.7, 12.670507)
+
+[node name="Collectible74" parent="Points" unique_id=217617979 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.240397, 0.49363583, 12.628004)
+
+[node name="Collectible75" parent="Points" unique_id=1439313755 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.176093, 0.7, 12.664824)
+
+[node name="Collectible76" parent="Points" unique_id=69026202 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9530306, 0.7, 11.022672)
+
+[node name="Collectible77" parent="Points" unique_id=902596691 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.605998, 0.70000094, 10.689798)
+
+[node name="Collectible78" parent="Points" unique_id=1220784618 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.646387, 0.69999903, 10.662837)
+
+[node name="Collectible79" parent="Points" unique_id=1090664703 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9346137, 0.7, 10.598783)
+
+[node name="Collectible80" parent="Points" unique_id=1958893228 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.000159, 0.7, 9.369175)
+
+[node name="Collectible81" parent="Points" unique_id=931287055 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.134636, 0.7, 8.860628)
+
+[node name="Collectible82" parent="Points" unique_id=460670352 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.147004, 0.7, 7.067572)
+
+[node name="Collectible83" parent="Points" unique_id=223182546 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.997466, 0.7, 5.5950003)
+
+[node name="Collectible84" parent="Points" unique_id=153486777 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.894156, 0.7, 8.65509)
+
+[node name="Collectible85" parent="Points" unique_id=997348839 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8439596, 0.7, 7.047681)
+
+[node name="Collectible86" parent="Points" unique_id=1843825290 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14324951, 0.7, 7.0041833)
+
+[node name="Collectible87" parent="Points" unique_id=1091062738 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.845757, 0.7, 7.0173464)
+
+[node name="Collectible88" parent="Points" unique_id=1491829588 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0161042, 0.7, 5.4795)
+
+[node name="Collectible89" parent="Points" unique_id=14447646 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1443064, 0.7, 10.600572)
+
+[node name="Collectible90" parent="Points" unique_id=919167041 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0264322, 0.7, 10.563463)
+
+[node name="Collectible91" parent="Points" unique_id=1626100326 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9727962, 0.7, 10.505699)
+
+[node name="Collectible92" parent="Points" unique_id=52771276 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8163004, 0.70000285, -8.81122)
+
+[node name="Collectible93" parent="Points" unique_id=1687551904 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.033397, 0.7000057, -5.723759)
+
+[node name="Collectible94" parent="Points" unique_id=1044958120 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0962305, 0.7000057, -5.7292547)
+
+[node name="Collectible96" parent="Points" unique_id=267787690 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8963375, 0.7000057, -6.4639897)
+
+[node name="Collectible97" parent="Points" unique_id=535020797 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.878221, 0.7000057, -8.569315)
+
+[node name="Collectible98" parent="Points" unique_id=1394049490 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.746655, 0.7000057, -11.999789)
+
+[node name="Collectible99" parent="Points" unique_id=2024819866 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8165655, 0.7000057, -14.047049)
+
+[node name="Collectible100" parent="Points" unique_id=638135959 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.81416, 0.7000057, -8.641999)
+
+[node name="Collectible101" parent="Points" unique_id=260714034 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.809938, 0.7000057, -14.018278)
+
+[node name="Collectible102" parent="Points" unique_id=1337186695 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.849726, 0.7000057, -12.227795)
+
+[node name="Collectible103" parent="Points" unique_id=1192059150 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.321481, 0.7000057, -14.006073)
+
+[node name="Collectible104" parent="Points" unique_id=316884538 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.007538, 0.7000057, -3.9100242)
+
+[node name="Collectible105" parent="Points" unique_id=1241749556 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.823697, 0.7000057, 0.7197244)
+
+[node name="Collectible106" parent="Points" unique_id=390523307 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.861198, 0.7000057, 0.76761687)
+
+[node name="Collectible107" parent="Points" unique_id=440898254 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.834346, 0.7000057, -1.4104009)
+
+[node name="Collectible108" parent="Points" unique_id=346234416 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.854112, 0.7000057, -3.0990934)
+
+[node name="Collectible109" parent="Points" unique_id=338532269 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.726475, 0.7000057, -2.3951135)
+
+[node name="Collectible110" parent="Points" unique_id=1504227551 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9220166, 0.7000057, -4.4027147)
+
+[node name="Collectible111" parent="Points" unique_id=1578578672 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9784303, 0.7000057, -2.4143534)
+
+[node name="Collectible112" parent="Points" unique_id=404962317 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.052837, 0.7000057, 0.7107804)
+
+[node name="Collectible113" parent="Points" unique_id=2064479186 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.403899, 0.7000057, 4.081557)
+
+[node name="Collectible114" parent="Points" unique_id=984130073 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.029953, 0.7000057, 2.308694)
+
+[node name="Collectible115" parent="Points" unique_id=1506887723 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.87731, 0.7000057, -8.595762)
+
+[node name="Collectible116" parent="Points" unique_id=1252355052 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.787738, 0.7000057, -6.8481197)
+
+[node name="Collectible117" parent="Points" unique_id=1528557528 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.880268, 0.7000057, -10.334503)
+
+[node name="Collectible118" parent="Points" unique_id=561806872 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.928077, 0.7000057, 2.6485014)
+
+[node name="Collectible119" parent="Points" unique_id=151441026 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.838009, 0.7000057, -10.276663)
+
+[node name="Collectible120" parent="Points" unique_id=1545772666 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.014843, 0.7000057, 4.1283317)
+
+[node name="Collectible121" parent="Points" unique_id=1826817151 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.043071, 0.7000057, 7.509814)
+
+[node name="Collectible122" parent="Points" unique_id=670698842 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.851129, 0.7000057, -4.9522653)
+
+[node name="Collectible123" parent="Points" unique_id=1551651860 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.198561, 0.7000057, -8.66912)
+
+[node name="Collectible124" parent="Points" unique_id=1038608102 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.555434, 0.70000523, 7.491687)
+
+[node name="Collectible125" parent="Points" unique_id=174190296 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.993178, 0.7000057, 1.8706989)
+
+[node name="Collectible126" parent="Points" unique_id=1458733536 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.047965, 0.7000057, -0.038291216)
+
+[node name="Collectible127" parent="Points" unique_id=488395251 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.034145, 0.7000057, -2.0325017)
+
+[node name="Collectible128" parent="Points" unique_id=1477128602 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.330237, 0.7000057, 12.984626)
+
+[node name="Collectible129" parent="Points" unique_id=1099788784 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.024562, 0.7000057, 4.2605543)
+
+[node name="Collectible130" parent="Points" unique_id=371517774 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.988353, 0.7000057, 5.9021053)
+
+[node name="Collectible131" parent="Points" unique_id=91783763 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.675511, 0.70000595, 4.224436)
+
+[node name="Collectible132" parent="Points" unique_id=589566480 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.283113, 0.7000057, 7.41543)
+
+[node name="Collectible133" parent="Points" unique_id=784211376 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9674053, 0.7000057, 5.780219)
+
+[node name="Collectible134" parent="Points" unique_id=1380347228 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9797077, 0.7000057, 4.1470423)
+
+[node name="Collectible135" parent="Points" unique_id=1109167433 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9942036, 0.7000057, 7.429017)
+
+[node name="Collectible136" parent="Points" unique_id=390521857 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.968607, 0.7000057, 10.634363)
+
+[node name="Collectible137" parent="Points" unique_id=1371306374 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8975472, 0.7000057, 7.532481)
+
+[node name="Collectible138" parent="Points" unique_id=712204381 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.555006, 0.7000057, 10.600061)
+
+[node name="Collectible139" parent="Points" unique_id=1023009868 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.731387, 0.7000057, 7.3983693)
+
+[node name="Collectible140" parent="Points" unique_id=452920791 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7738333, 0.7000057, 9.127299)
+
+[node name="Collectible142" parent="Points" unique_id=283392281 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.996153, 0.7000057, 7.52864)
+
+[node name="Collectible143" parent="Points" unique_id=354495135 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.978587, 0.7000057, 9.273939)
+
+[node name="Collectible144" parent="Points" unique_id=1425347521 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.808348, 0.7000057, 9.300194)
+
+[node name="Collectible145" parent="Points" unique_id=1867139026 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.522538, 0.7000057, 10.599951)
+
+[node name="Collectible146" parent="Points" unique_id=176827257 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.343006, 0.7000057, -5.137443)
+
+[node name="Collectible147" parent="Points" unique_id=768676125 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.737625, 0.7000057, 12.944194)
+
+[node name="Collectible148" parent="Points" unique_id=1205414456 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.989404, 0.7000057, 12.7445965)
+
+[node name="Collectible149" parent="Points" unique_id=590269749 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.778082, 0.7000057, 11.233619)
+
+[node name="Collectible150" parent="Points" unique_id=1982287123 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.094695, 0.7000057, -8.638774)
+
+[node name="Collectible151" parent="Points" unique_id=1956119893 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.258625, 0.7000057, 10.461019)
+
+[node name="Collectible152" parent="Points" unique_id=386560590 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.942275, 0.7000057, 11.1242)
+
+[node name="Collectible153" parent="Points" unique_id=1452014952 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8101149, 0.7000057, -8.321433)
+
+[node name="Collectible154" parent="Points" unique_id=1180635359 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8505564, 0.7000064, -10.383531)
+
+[node name="Collectible155" parent="Points" unique_id=791945780 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6164126, 0.7000064, -12.063864)
+
+[node name="Collectible156" parent="Points" unique_id=407180107 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9677657, 0.7000062, -8.377556)
+
+[node name="Collectible157" parent="Points" unique_id=764619566 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08672738, 0.7000057, -8.3693905)
+
+[node name="Collectible158" parent="Points" unique_id=557763664 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15334308, 0.7000057, -11.927204)
+
+[node name="Collectible159" parent="Points" unique_id=409833007 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0651994, 0.7000057, -11.953913)
+
+[node name="Collectible160" parent="Points" unique_id=1632968460 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.037239, 0.7000057, -11.978057)
+
+[node name="Collectible161" parent="Points" unique_id=229076246 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8473654, 0.7000057, -11.861486)
+
+[node name="Collectible162" parent="Points" unique_id=1790071629 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.018104, 0.7000057, -11.898594)
+
+[node name="Collectible163" parent="Points" unique_id=1366813570 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.964465, 0.7000057, -11.956358)
+
+[node name="Collectible164" parent="Points" unique_id=593753142 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8483763, 0.7, -10.492098)
+
+[node name="Collectible165" parent="Points" unique_id=744039613 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2251635, 0.7, -12.088091)
+
+[node name="Collectible166" parent="Points" unique_id=264736602 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7304077, 0.7, -12.145248)
+
+[node name="Collectible167" parent="Points" unique_id=1528770733 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2977383, 0.7, -12.048453)
+
+[node name="Collectible168" parent="Points" unique_id=756316352 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8632994, 0.7, -10.199598)
+
+[node name="Collectible169" parent="Points" unique_id=1359826897 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7931385, 0.7, -8.353649)
+
+[node name="Collectible170" parent="Points" unique_id=1010436177 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7047644, 0.7, -6.8844204)
+
+[node name="Collectible141" parent="Points" unique_id=1922232117 instance=ExtResource("5_3s7pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0862992, 0.7, -6.689651)
+
+[node name="UI" type="Control" parent="." unique_id=462663299]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_5usfb")
+
+[node name="Timer" type="Label" parent="UI" unique_id=548611677]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="OrbsLeft" type="Label" parent="UI" unique_id=793798808]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="WinScreen" type="Panel" parent="UI" unique_id=1940203215]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 370.0
+offset_top = 117.0
+offset_right = 735.0
+offset_bottom = 487.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/WinScreen" unique_id=58365862]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.5
+offset_top = -77.0
+offset_right = 168.5
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="WinLabel" type="Label" parent="UI/WinScreen/VBoxContainer" unique_id=1817075881]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.05490196, 1, 0.4117647, 1)
+theme_override_fonts/font = ExtResource("7_1331x")
+theme_override_font_sizes/font_size = 28
+text = "You Collected All The Orbs!!"
+horizontal_alignment = 1
+
+[node name="TimeRemaining" type="Label" parent="UI/WinScreen/VBoxContainer" unique_id=1414552275]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("7_1331x")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+
+[node name="Retry" type="Button" parent="UI/WinScreen/VBoxContainer" unique_id=73311396]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0, 0.7764706, 0, 1)
+theme_override_fonts/font = ExtResource("7_1331x")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5usfb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3362g")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ia54j")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3b286")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8hw6n")
+text = "Do it again "
+
+[node name="MainMenu" type="Button" parent="UI/WinScreen/VBoxContainer" unique_id=747339039]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.85490197, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_1331x")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sqc6m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lq2ne")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qa7se")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gq8xe")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lvs8h")
+text = "Nah I'm good"
+
+[node name="LossScreen" type="Panel" parent="UI" unique_id=996030945]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 117.0
+offset_right = 781.0
+offset_bottom = 528.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/LossScreen" unique_id=1392517204]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -99.5
+offset_bottom = 99.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 26
+
+[node name="LossLabel" type="Label" parent="UI/LossScreen/VBoxContainer" unique_id=249501820]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.8666667, 0.11764706, 0, 1)
+theme_override_fonts/font = ExtResource("7_1331x")
+theme_override_font_sizes/font_size = 28
+text = "You Ran Out Of TIME!!"
+horizontal_alignment = 1
+
+[node name="Retry" type="Button" parent="UI/LossScreen/VBoxContainer" unique_id=255377033]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.9490196, 0.84313726, 0, 1)
+theme_override_fonts/font = ExtResource("7_1331x")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x4tag")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vfhvb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_awmxm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ovg3l")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wf3u0")
+text = "Run That Back"
+
+[node name="MainMenu" type="Button" parent="UI/LossScreen/VBoxContainer" unique_id=852929096]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.9490196, 0, 1, 1)
+theme_override_fonts/font = ExtResource("7_1331x")
+theme_override_font_sizes/font_size = 20
+text = "Actually, I think Im fine with my performance and would like to venture back to the main menu..."
+autowrap_mode = 3
 
 [node name="PickupSound" type="AudioStreamPlayer" parent="." unique_id=1015487254]
 stream = ExtResource("7_f4amj")
 volume_db = -10.0
+
+[connection signal="pressed" from="UI/WinScreen/VBoxContainer/Retry" to="UI" method="_on_retry_pressed"]
+[connection signal="pressed" from="UI/WinScreen/VBoxContainer/MainMenu" to="UI" method="_on_main_menu_pressed"]

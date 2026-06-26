@@ -2,18 +2,17 @@
 
 [ext_resource type="Script" uid="uid://bwrn03icpxx5u" path="res://Scripts/main_menu.gd" id="1_i2xx2"]
 [ext_resource type="Texture2D" uid="uid://c51gl6iabgqwu" path="res://Screenshot 2026-06-08 150939.png" id="2_o14dv"]
+[ext_resource type="FontFile" uid="uid://caxtk78mytsox" path="res://exclusion.ttf" id="3_o14dv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ce3w2"]
 texture = ExtResource("2_o14dv")
 modulate_color = Color(0, 0.95463806, 0.260846, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erv1k"]
-bg_color = Color(0.07203511, 0.33484206, 0.3688648, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_offset = Vector2(0, 0.315)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7lva"]
+bg_color = Color(1, 1, 1, 0.45490196)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mrfpk"]
+bg_color = Color(1, 1, 1, 0.45490196)
 
 [node name="MainMenu" type="Control" unique_id=624849433]
 layout_mode = 3
@@ -40,10 +39,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -172.0
-offset_top = -114.0
-offset_right = 172.0
-offset_bottom = 114.0
+offset_left = -550.0
+offset_top = -124.0
+offset_right = -160.0
+offset_bottom = 90.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 22
@@ -51,17 +50,21 @@ theme_override_constants/separation = 22
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=469752023]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_o14dv")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_erv1k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_u7lva")
 text = "Start"
 
 [node name="Button2" type="Button" parent="VBoxContainer" unique_id=168540661]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_o14dv")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_erv1k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mrfpk")
 text = "Quit
 "
 
@@ -72,12 +75,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -342.0
-offset_top = -252.0
-offset_right = 349.0
-offset_bottom = -128.0
+offset_left = -564.0
+offset_top = -282.0
+offset_right = -113.0
+offset_bottom = -155.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_o14dv")
 theme_override_font_sizes/font_size = 53
 text = "Main Menu"
 horizontal_alignment = 1
