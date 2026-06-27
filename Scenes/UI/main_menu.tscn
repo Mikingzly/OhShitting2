@@ -1,12 +1,21 @@
 [gd_scene format=3 uid="uid://bqh7bgchbxivh"]
 
 [ext_resource type="Script" uid="uid://bwrn03icpxx5u" path="res://Scripts/main_menu.gd" id="1_i2xx2"]
-[ext_resource type="Texture2D" uid="uid://c51gl6iabgqwu" path="res://Screenshot 2026-06-08 150939.png" id="2_o14dv"]
+[ext_resource type="Shader" uid="uid://c37acadm3gekk" path="res://Assets/Menu.gdshader" id="2_u7lva"]
 [ext_resource type="FontFile" uid="uid://caxtk78mytsox" path="res://exclusion.ttf" id="3_o14dv"]
+[ext_resource type="AudioStream" uid="uid://kv6te8u4cslu" path="res://MenuMusic.wav" id="4_mrfpk"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ce3w2"]
-texture = ExtResource("2_o14dv")
-modulate_color = Color(0, 0.95463806, 0.260846, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i2xx2"]
+shader = ExtResource("2_u7lva")
+shader_parameter/bg_color = Color(0.03, 0.03, 0.07, 1)
+shader_parameter/line_color = Color(0.1, 0.1, 0.3, 1)
+shader_parameter/glow_color = Color(0.2, 0.4, 1, 1)
+shader_parameter/grid_size = 0.06
+shader_parameter/line_thickness = 0.002
+shader_parameter/scroll_speed = 0.06
+shader_parameter/motion_strength = 0.007
+shader_parameter/motion_speed1 = 0.03
+shader_parameter/motion_speed2 = 0.015
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7lva"]
 bg_color = Color(1, 1, 1, 0.45490196)
@@ -23,14 +32,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_i2xx2")
 
-[node name="Panel" type="Panel" parent="." unique_id=1684971402]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1033934312]
+material = SubResource("ShaderMaterial_i2xx2")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_ce3w2")
+mouse_filter = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=94097703]
 layout_mode = 1
@@ -83,9 +93,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_o14dv")
 theme_override_font_sizes/font_size = 53
-text = "Main Menu"
+text = "CHAOTIC LABYRINNTH"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=896972929]
+stream = ExtResource("4_mrfpk")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_quit_pressed"]

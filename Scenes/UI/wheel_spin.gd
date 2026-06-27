@@ -81,15 +81,31 @@ func apply_modifier(index: int) -> void:
 	GameState.current_modifier = modifiers[index]
 
 
+func set_spinning_state():
+	spin_button.disabled = true
+	continue_button.visible = false
+
+
+func set_ready_state():
+	spin_button.disabled = false
+	continue_button.visible = true
+
+
+func set_idle_state():
+	spin_button.disabled = false
+	continue_button.visible = false
+	result_label.text = ""
+
+
+
 func spin_wheel():
-	if spinning or has_result:
+	if spinning:
 		return
 	
+	set_spinning_state()
 	spinning = true
-	spin_button.disabled = true
-
-	# pick random slice
-	var result_index = randi() % SLICES
+	
+	result_index = randi() % SLICES
 
 	# how many full spins
 	var full_spins = 5
@@ -111,7 +127,16 @@ func spin_wheel():
 		
 		show_result(result_index)
 		show_continue_button()
+		
+		set_ready_state()
 	)
+
+
+func reset_spin():
+	has_result = false
+	continue_button.visible = false
+	result_label.text = ""
+
 
 func show_result(index: int) -> void:
 	var text := ""
@@ -130,16 +155,12 @@ func show_result(index: int) -> void:
 
 
 func show_continue_button():
-	spin_button.visible = false
 	continue_button.visible = true
 
 
 
-
-
-
-
 func _on_btn_spin_pressed() -> void:
+	reset_spin()
 	spin_wheel()
 
 

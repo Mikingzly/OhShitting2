@@ -218,5 +218,38 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_0f6r2")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_7ai5n")
 text = "Continue"
 
+[node name="Explanation" type="Label" parent="." unique_id=1862132918]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = 240.0
+offset_right = -873.0
+offset_bottom = -253.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("8_2pehf")
+theme_override_font_sizes/font_size = 32
+text = "Click the Button in the middle to SPIN...
+
+After SPIN, reclick it to SPIN again to try for your desired MODE..."
+autowrap_mode = 3
+
+[node name="Movements" type="Label" parent="." unique_id=2053267785]
+layout_mode = 0
+offset_left = 901.0
+offset_top = 217.0
+offset_right = 1079.0
+offset_bottom = 354.0
+theme_override_constants/line_spacing = 10
+theme_override_fonts/font = ExtResource("8_2pehf")
+theme_override_font_sizes/font_size = 38
+text = "W
+ASD
+To Move"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="Textures/btn_spin" to="." method="_on_btn_spin_pressed"]
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]

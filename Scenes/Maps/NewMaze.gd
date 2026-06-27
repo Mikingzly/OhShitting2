@@ -1,6 +1,6 @@
 extends Node3D
 
-@onready var post_process = $PostProcess
+@onready var post_process = $CanvasLayer/PostProcess
 @onready var player = $"Player"
 @onready var win_panel = $"UI/WinScreen"
 @onready var lose_panel = $"UI/LossScreen"
@@ -55,8 +55,7 @@ func _process(delta):
 	update_ui()
 
 
-func disable_shaders():
-	post_process.visible = false
+
 
 
 func apply_modifier(mod: String) -> void:
@@ -184,8 +183,11 @@ func apply_dark():
 
 
 func apply_shaders():
+	print("apply_shaders called")
 	post_process.visible = true
+	
 
+	post_process.material.set("shader_parameter/force", randf())
 
 func apply_monochrome():
 	var env = $WorldEnvironment.environment
@@ -193,7 +195,7 @@ func apply_monochrome():
 	env.adjustment_enabled = true
 	env.adjustment_saturation = 0.0
 	env.adjustment_contrast = 1.2
-	env.adjustment_brightness = -0.05
+
 
 
 func apply_disaster_fest():
