@@ -11,7 +11,7 @@ extends Node3D
 @onready var win_audio = $"UI/WinSound"
 @onready var lose_audio = $"UI/LoseSound"
 
-@export var starting_orbs := 170
+@export var starting_orbs := 169
 @export var starting_time := 90.0
 
 var base_speed := 5.0
