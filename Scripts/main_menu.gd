@@ -1,7 +1,7 @@
 extends Control
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Maps/spinningmaze.tscn")
+	get_tree().change_scene_to_file("res://Scenes/UI/WheelSpin.tscn")
 
 
 func _on_quit_pressed() -> void:

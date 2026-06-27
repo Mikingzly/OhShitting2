@@ -1,0 +1,222 @@
+[gd_scene format=3 uid="uid://cck006knl4tru"]
+
+[ext_resource type="Script" uid="uid://0os0mb0apaiq" path="res://Scenes/UI/wheel_spin.gd" id="1_2icnn"]
+[ext_resource type="Texture2D" uid="uid://o5281jsg2i68" path="res://WheelSpinTextures/spin_wheel_background.png" id="1_v4h4k"]
+[ext_resource type="Texture2D" uid="uid://ff556ic5603l" path="res://WheelSpinTextures/spin_wheel_front_empty.png" id="2_k2yiq"]
+[ext_resource type="Texture2D" uid="uid://bsd6eravgnhy5" path="res://WheelSpinTextures/spin_wheel_button.png" id="3_j010k"]
+[ext_resource type="Texture2D" uid="uid://swfesmtw11ic" path="res://WheelSpinTextures/spin_wheel_button_press.png" id="4_2icnn"]
+[ext_resource type="Texture2D" uid="uid://defxo6urikxl6" path="res://WheelSpinTextures/spin_wheel_button_ring.png" id="4_2pehf"]
+[ext_resource type="Texture2D" uid="uid://cbu3r8pscyuvj" path="res://WheelSpinTextures/spin_wheel_arrow.png" id="7_o3tq5"]
+[ext_resource type="FontFile" uid="uid://caxtk78mytsox" path="res://exclusion.ttf" id="8_2pehf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o3tq5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f772e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bsdsl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0f6r2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ai5n"]
+
+[node name="WheelSpin" type="Control" unique_id=1744619021]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2icnn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1530922367]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.009112918, 0.024146648, 0.01674556, 1)
+
+[node name="Textures" type="CanvasLayer" parent="." unique_id=3212225]
+
+[node name="Wheel" type="TextureRect" parent="Textures" unique_id=1133127680]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -446.0
+offset_right = 450.0
+offset_bottom = 454.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(450, 450)
+texture = ExtResource("1_v4h4k")
+
+[node name="front" type="TextureRect" parent="Textures/Wheel" unique_id=2138444982]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -404.0
+offset_top = -404.0
+offset_right = 496.0
+offset_bottom = 496.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_k2yiq")
+
+[node name="Labels" type="Control" parent="Textures/Wheel" unique_id=351933074]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Textures/Wheel/Labels" unique_id=1771250837]
+layout_mode = 0
+offset_right = 1.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("8_2pehf")
+theme_override_font_sizes/font_size = 32
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Textures/Wheel/Labels" unique_id=1858983428]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("8_2pehf")
+theme_override_font_sizes/font_size = 32
+
+[node name="Label3" type="Label" parent="Textures/Wheel/Labels" unique_id=1636080072]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("8_2pehf")
+theme_override_font_sizes/font_size = 32
+
+[node name="Label4" type="Label" parent="Textures/Wheel/Labels" unique_id=864947829]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("8_2pehf")
+theme_override_font_sizes/font_size = 32
+
+[node name="Label5" type="Label" parent="Textures/Wheel/Labels" unique_id=1107411653]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("8_2pehf")
+theme_override_font_sizes/font_size = 32
+
+[node name="Label6" type="Label" parent="Textures/Wheel/Labels" unique_id=942498836]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("8_2pehf")
+theme_override_font_sizes/font_size = 32
+
+[node name="Label7" type="Label" parent="Textures/Wheel/Labels" unique_id=1752995742]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("8_2pehf")
+theme_override_font_sizes/font_size = 32
+
+[node name="Label8" type="Label" parent="Textures/Wheel/Labels" unique_id=364727475]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("8_2pehf")
+theme_override_font_sizes/font_size = 32
+
+[node name="background_button" type="TextureRect" parent="Textures" unique_id=1993500405]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -47.0
+offset_right = 153.0
+offset_bottom = 153.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_2pehf")
+
+[node name="btn_spin" type="TextureButton" parent="Textures" unique_id=337079902]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -41.0
+offset_right = 159.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.44945818, 0.43418342)
+texture_normal = ExtResource("3_j010k")
+texture_pressed = ExtResource("4_2icnn")
+stretch_mode = 3
+
+[node name="arrow" type="TextureRect" parent="Textures" unique_id=1898660833]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.99994
+offset_top = 104.0
+offset_right = 165.00006
+offset_bottom = 313.94427
+grow_horizontal = 2
+scale = Vector2(0.4069546, 0.26969638)
+texture = ExtResource("7_o3tq5")
+
+[node name="ResultLabel" type="Label" parent="." unique_id=891921643]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 403.0
+offset_top = 32.0
+offset_right = -388.0
+offset_bottom = 100.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("8_2pehf")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+
+[node name="ContinueButton" type="Button" parent="." unique_id=1689688216]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 394.0
+offset_top = -82.0
+offset_right = -380.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 0
+theme_override_colors/font_hover_color = Color(0.33333334, 0.8509804, 0, 1)
+theme_override_fonts/font = ExtResource("8_2pehf")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o3tq5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_f772e")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bsdsl")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0f6r2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7ai5n")
+text = "Continue"
+
+[connection signal="pressed" from="Textures/btn_spin" to="." method="_on_btn_spin_pressed"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]

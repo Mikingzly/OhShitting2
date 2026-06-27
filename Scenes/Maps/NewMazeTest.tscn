@@ -9,6 +9,20 @@
 [ext_resource type="Script" uid="uid://bitclhqabjgom" path="res://Scenes/Maps/ui.gd" id="7_5usfb"]
 [ext_resource type="FontFile" uid="uid://caxtk78mytsox" path="res://exclusion.ttf" id="7_1331x"]
 [ext_resource type="AudioStream" uid="uid://s0avgvlqlr01" path="res://Sounds/Collect_3.wav" id="7_f4amj"]
+[ext_resource type="AudioStream" uid="uid://euhw5cgihji1" path="res://Sounds/Finish_1.wav" id="9_ia54j"]
+[ext_resource type="AudioStream" uid="uid://oh2yql36f5bg" path="res://Sounds/LoseSound.wav" id="10_3b286"]
+[ext_resource type="AudioStream" uid="uid://ibgk1cyihd7i" path="res://Sounds/ClockTick.wav" id="10_5usfb"]
+[ext_resource type="Shader" uid="uid://rw3u0e2a1qh8" path="res://Assets/Modifier1.gdshader" id="13_3b286"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8hw6n"]
+shader = ExtResource("13_3b286")
+shader_parameter/GlassColor = Color(0, 0, 0, 1)
+shader_parameter/Fogginess = 2.0
+shader_parameter/TextureOverlay = false
+shader_parameter/TextureMoveSpeed = 75.0
+shader_parameter/TextureModulationStregnth = 0.1
+shader_parameter/CelShading = false
+shader_parameter/CelShadingStregnth = 10.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ou653"]
 size = Vector3(34.62616, 1, 33.818604)
@@ -140,6 +154,18 @@ func _process(delta: float) -> void:
 
 [node name="NewMazeTest" type="Node3D" unique_id=1493926343]
 script = ExtResource("1_h7weh")
+
+[node name="PostProcess" type="CanvasLayer" parent="." unique_id=789380496]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="PostProcess" unique_id=569797399]
+material = SubResource("ShaderMaterial_8hw6n")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1273130870]
 
@@ -323,10 +349,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4057255, 0.91988176, -0.24
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=706752454]
 environment = SubResource("Environment_x4tag")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1843788282]
-visible = false
+[node name="Normal Shader" type="CanvasLayer" parent="." unique_id=1843788282]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=943745066]
+[node name="ColorRect1" type="ColorRect" parent="Normal Shader" unique_id=943745066]
 material = SubResource("ShaderMaterial_8d3l1")
 anchors_preset = 15
 anchor_right = 1.0
@@ -858,31 +883,50 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0862992, 0.7, -6.689651)
 
 [node name="UI" type="Control" parent="." unique_id=462663299]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("7_5usfb")
 
 [node name="Timer" type="Label" parent="UI" unique_id=548611677]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 822.0
+offset_top = 147.0
+offset_bottom = -381.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_1331x")
+theme_override_font_sizes/font_size = 31
+horizontal_alignment = 1
 
 [node name="OrbsLeft" type="Label" parent="UI" unique_id=793798808]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 822.0
+offset_top = 83.0
+offset_right = -12.0
+offset_bottom = -443.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_1331x")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
 
 [node name="WinScreen" type="Panel" parent="UI" unique_id=1940203215]
+process_mode = 2
 visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 370.0
-offset_top = 117.0
-offset_right = 735.0
-offset_bottom = 487.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -943,14 +987,18 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_lq2ne")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_qa7se")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_gq8xe")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_lvs8h")
-text = "Nah I'm good"
+text = "Actually, I think Im fine with my performance and would like to venture back to the main menu..."
+autowrap_mode = 3
 
 [node name="LossScreen" type="Panel" parent="UI" unique_id=996030945]
-layout_mode = 0
-offset_left = 370.0
-offset_top = 117.0
-offset_right = 781.0
-offset_bottom = 528.0
+process_mode = 2
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/LossScreen" unique_id=1392517204]
 layout_mode = 1
@@ -995,9 +1043,24 @@ theme_override_font_sizes/font_size = 20
 text = "Actually, I think Im fine with my performance and would like to venture back to the main menu..."
 autowrap_mode = 3
 
+[node name="WinSound" type="AudioStreamPlayer" parent="UI" unique_id=145035388]
+process_mode = 3
+stream = ExtResource("9_ia54j")
+
+[node name="LoseSound" type="AudioStreamPlayer" parent="UI" unique_id=587636594]
+process_mode = 3
+stream = ExtResource("10_3b286")
+
 [node name="PickupSound" type="AudioStreamPlayer" parent="." unique_id=1015487254]
 stream = ExtResource("7_f4amj")
-volume_db = -10.0
+volume_db = -25.0
+
+[node name="TickSound" type="AudioStreamPlayer" parent="." unique_id=272639679]
+stream = ExtResource("10_5usfb")
+volume_db = -20.0
+pitch_scale = 0.01
 
 [connection signal="pressed" from="UI/WinScreen/VBoxContainer/Retry" to="UI" method="_on_retry_pressed"]
 [connection signal="pressed" from="UI/WinScreen/VBoxContainer/MainMenu" to="UI" method="_on_main_menu_pressed"]
+[connection signal="pressed" from="UI/LossScreen/VBoxContainer/Retry" to="UI" method="_on_retry_pressed"]
+[connection signal="pressed" from="UI/LossScreen/VBoxContainer/MainMenu" to="UI" method="_on_main_menu_pressed"]

@@ -1,14 +1,17 @@
 extends CharacterBody3D
 
-
-const SPEED = 8.0
+var base_speed := 8.0
+var speed := 8.0
 const JUMP_VELOCITY = 4.5
+var inverted_controls := false
 
 @onready var head: Node3D = %Head
 @onready var camera_3d: Camera3D = $Head/Camera3D
 @export var sensitivity: float = 0.002
 @onready var pause_menu: Control = %PauseMenu
 @onready var Flashlight = $Head/Camera3D/Flashlight
+
+
 
 
 func _ready() -> void:
@@ -34,13 +37,19 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("left", "right", "up", "down")
+	if inverted_controls:
+		input_dir.x *= -1
+		input_dir.y *= -1
 	var direction := (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.z = move_toward(velocity.z, 0, speed)
+
+
+
 
 	move_and_slide()
 	
@@ -54,3 +63,15 @@ func _process(delta: float) -> void:
 	
 	if Flashlight.visible:
 		Flashlight.light_energy = randf_range(2.8, 3.2)
+
+
+func set_speed(value: float):
+	speed = value
+
+
+func set_inverted(state: bool):
+	inverted_controls = state
+
+
+func set_flashlight(state: bool):
+	Flashlight.visible = state

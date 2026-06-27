@@ -8,6 +8,7 @@ var last_sound := -1
 @export var points := 1
 var t := 0.0
 var start_pos : Vector3
+var collected := false
 
 func _ready():
 	start_pos = position
@@ -16,12 +17,17 @@ func _ready():
 
 
 func _on_body_entered(body):
+	if collected:
+		return
 	if body.is_in_group("Player"):
-		Game.add_score(points)
+		collected = true
+		GameState.add_score(points)
 		audio.stream = collect_sounds[randi() % collect_sounds.size()]
 		audio.play()
 		get_node("/root/NewMazeTest").orb_collected()
 		print("Touched by:", body.name)
+		visible = false
+		monitoring = false
 		await audio.finished
 		queue_free()
 
